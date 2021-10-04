@@ -17,7 +17,13 @@ struct ContentView: View {
                     .fontWeight(.heavy)
                     .frame(width: 280, height: 50)
                     .foregroundColor(.white)
-                    .background(Color(.systemPink))
+                    .background(
+                        LinearGradient(
+                            gradient: Gradient(colors: [Color(.systemTeal), Color(.systemPurple)]),
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
                     .clipShape(Capsule())
             })
             
@@ -49,5 +55,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }
