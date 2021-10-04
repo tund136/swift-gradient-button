@@ -104,6 +104,9 @@ struct ContentView: View {
                     )
                     .clipShape(Circle())
             })
+            
+            LinearGradient(gradient: brandGradient, startPoint: .leading, endPoint: .trailing)
+                .mask(Text("Gradient Text").font(.largeTitle).fontWeight(.bold))
         }
     }
 }
