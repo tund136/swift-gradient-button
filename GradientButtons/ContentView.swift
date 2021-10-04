@@ -77,7 +77,12 @@ struct ContentView: View {
                     .fontWeight(.heavy)
                     .frame(width: 160, height: 160)
                     .foregroundColor(.white)
-                    .background(Color(.systemPink))
+                    .background(
+                        AngularGradient(
+                            gradient: brandGradient,
+                            center: .center
+                        )
+                    )
                     .clipShape(Circle())
             })
         }
