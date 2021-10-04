@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    var brandGradient = Gradient(colors: [
+        Color(.systemTeal),
+        Color(.systemOrange),
+        Color(.systemPink),
+        Color(.systemPurple)
+    ])
+    
     var body: some View {
         VStack(spacing: 60) {
             Button(action: {
@@ -19,7 +26,7 @@ struct ContentView: View {
                     .foregroundColor(.white)
                     .background(
                         LinearGradient(
-                            gradient: Gradient(colors: [Color(.systemTeal), Color(.systemPurple)]),
+                            gradient: brandGradient,
                             startPoint: .leading,
                             endPoint: .trailing
                         )
