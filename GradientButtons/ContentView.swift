@@ -53,6 +53,25 @@ struct ContentView: View {
             })
             
             Button(action: {
+                print("Linear Gradient Button Tapped.")
+            }, label: {
+                Text("Linear Gradient")
+                    .fontWeight(.heavy)
+                    .frame(width: 280, height: 50)
+                    .foregroundColor(.white)
+                    .overlay(
+                        Capsule().stroke(
+                            LinearGradient(
+                                gradient: brandGradient,
+                                startPoint: .leading,
+                                endPoint: .trailing
+                            ),
+                            lineWidth: 4
+                        )
+                    )
+            })
+            
+            Button(action: {
                 print("Radial Gradient Button Tapped.")
             }, label: {
                 Text("Radial Gradient")
