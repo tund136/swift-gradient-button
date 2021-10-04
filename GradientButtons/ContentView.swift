@@ -35,13 +35,38 @@ struct ContentView: View {
             })
             
             Button(action: {
+                print("Linear Gradient Button Tapped.")
+            }, label: {
+                Text("Linear Gradient")
+                    .fontWeight(.heavy)
+                    .frame(width: 280, height: 50)
+                    .foregroundColor(.white)
+                    .background(
+                        RadialGradient(
+                            gradient: brandGradient,
+                            center: .center,
+                            startRadius: 15,
+                            endRadius: 120
+                        )
+                    )
+                    .clipShape(Capsule())
+            })
+            
+            Button(action: {
                 print("Radial Gradient Button Tapped.")
             }, label: {
                 Text("Radial Gradient")
                     .fontWeight(.heavy)
                     .frame(width: 160, height: 160)
                     .foregroundColor(.white)
-                    .background(Color(.systemPink))
+                    .background(
+                        RadialGradient(
+                            gradient: brandGradient,
+                            center: .center,
+                            startRadius: 15,
+                            endRadius: 120
+                        )
+                    )
                     .clipShape(Circle())
             })
             
